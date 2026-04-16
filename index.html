@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Dance Classes | Where Passion Meets Performance</title>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+        "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'royal-blue': '#002366',
+              'gold': '#FFD700',
+              'whatsapp': '#25D366',
+              'whatsapp-dark': '#128C7E',
+            },
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+      .font-display {
+        font-family: 'Playfair+Display', serif;
+      }
+      .bg-royal-blue {
+        background-color: #002366;
+      }
+      .text-gold {
+        color: #FFD700;
+      }
+      .bg-gold {
+        background-color: #FFD700;
+      }
+      .border-gold {
+        border-color: #FFD700;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #002366;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FFD700;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

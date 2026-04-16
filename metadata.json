@@ -1,0 +1,7 @@
+{
+  "name": "CV Dance Classes - Premier Dance Academy",
+  "description": "Professional dance academy website for CV Dance Classes, featuring Hip Hop, Bollywood, Contemporary, and specialized dance programs in Dhanbad, Jharkhand.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
