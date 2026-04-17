@@ -32,7 +32,7 @@ const About: React.FC = () => {
             viewport={{ once: true }}
           >
             <img 
-              src="https://picsum.photos/seed/cv_dance_studio/1200/800" 
+              src="/legacy.png" 
               className="rounded-3xl shadow-2xl border border-white/10"
               alt="Dance Class Studio"
               referrerPolicy="no-referrer"

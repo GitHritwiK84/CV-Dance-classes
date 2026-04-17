@@ -68,7 +68,7 @@ const SpecialPrograms: React.FC = () => {
             </div>
             <div className="lg:w-1/2 h-80 lg:h-auto">
               <img 
-                src="https://images.unsplash.com/photo-1516475429286-465d815a0df7?auto=format&fit=crop&q=80&w=1200" 
+                src="/programs.png" 
                 className="w-full h-full object-cover"
                 alt="Wedding Dance"
                 referrerPolicy="no-referrer"
