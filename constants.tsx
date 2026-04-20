@@ -83,13 +83,14 @@ export const SPECIAL_PROGRAMS: SpecialProgram[] = [
 
 export const GALLERY_IMAGES: GalleryItem[] = [
   { id: "1", url: "/image1.webp", category: "performance" },
-  { id: "2", url: "/image2.webp", category: "practice" },
+  { id: "2", url: "/image2.webp", category: "performance" },
   { id: "3", url: "/image3.webp", category: "event" },
   { id: "4", url: "/image4.jpg", category: "event" },
-  { id: "5", url: "/image5.webp", category: "practice" },
-  { id: "6", url: "/nn.png", category: "performance" },
+  { id: "5", url: "/image5.webp", category: "performance" },
+  { id: "6", url: "/nn.png", category: "practice" },
   { id: "7", url: "/pp.png", category: "practice" },
-  { id: "8", url: "/dd.png", category: "performance" }
+  { id: "8", url: "/pf.webp", category: "performance" },
+  { id: "9", url: "/dd.png", category: "practice" }
 
 ];
 
