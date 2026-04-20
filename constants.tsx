@@ -81,11 +81,17 @@ export const SPECIAL_PROGRAMS: SpecialProgram[] = [
   { id: 'sp6', title: 'Event Performances', description: 'Professional dance troupes for corporate and private events.', icon: 'Mic2' },
 ];
 
-export const GALLERY_IMAGES: GalleryItem[] = Array.from({ length: 12 }).map((_, i) => ({
-  id: `g${i}`,
-  url: `https://picsum.photos/seed/dance${i}/800/600`,
-  category: i % 3 === 0 ? 'performance' : i % 3 === 1 ? 'practice' : 'event'
-}));
+export const GALLERY_IMAGES: GalleryItem[] = [
+  { id: "1", url: "/image1.webp", category: "performance" },
+  { id: "2", url: "/image2.webp", category: "practice" },
+  { id: "3", url: "/image3.webp", category: "event" },
+  { id: "4", url: "/image4.jpg", category: "event" },
+  { id: "5", url: "/image5.webp", category: "practice" },
+  { id: "6", url: "/nn.png", category: "performance" },
+  { id: "7", url: "/pp.png", category: "practice" },
+  { id: "8", url: "/dd.png", category: "performance" }
+
+];
 
 export const YOUTUBE_VIDEOS: YouTubeVideo[] = [
   { id: 'v1', title: 'Hip Hop Fusion', videoId: 'dQw4w9WgXcQ' }, // Placeholders
