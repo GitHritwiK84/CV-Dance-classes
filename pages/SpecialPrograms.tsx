@@ -2,6 +2,9 @@ import React from "react";
 // Cast motion to any to bypass TypeScript environment errors where framer-motion props are not recognized on intrinsic elements.
 import { motion as m } from "framer-motion";
 const motion = m as any;
+
+import { Link } from "react-router-dom";
+
 import {
   Music,
   Users,
@@ -11,6 +14,7 @@ import {
   Mic2,
   CalendarCheck,
 } from "lucide-react";
+
 import SectionHeading from "../components/SectionHeading";
 import { SPECIAL_PROGRAMS } from "../constants";
 
@@ -35,6 +39,7 @@ const SpecialPrograms: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SPECIAL_PROGRAMS.map((program, idx) => {
             const Icon = iconMap[program.icon];
+
             return (
               <motion.div
                 key={program.id}
@@ -47,15 +52,22 @@ const SpecialPrograms: React.FC = () => {
                 <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-gold transition-colors">
                   <Icon className="text-gold w-8 h-8 group-hover:text-black" />
                 </div>
+
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {program.title}
                 </h3>
+
                 <p className="text-gray-400 mb-8 leading-relaxed">
                   {program.description}
                 </p>
-                <button className="flex items-center gap-2 text-gold font-bold group-hover:underline">
+
+                {/* Navigate to Contact Page */}
+                <Link
+                  to="/contact"
+                  className="flex items-center gap-2 text-gold font-bold group-hover:underline"
+                >
                   Book Session <CalendarCheck className="w-4 h-4" />
-                </button>
+                </Link>
               </motion.div>
             );
           })}
@@ -68,17 +80,23 @@ const SpecialPrograms: React.FC = () => {
               <h3 className="text-black text-4xl font-black mb-6 uppercase">
                 Make Your Wedding Magical
               </h3>
+
               <p className="text-black/80 text-xl mb-10 leading-relaxed">
                 We specialize in Ladies Sangeet and Bride/Groom entries. From
                 classic romantic tracks to high-energy Bollywood mashups, we
                 choreograph performances that leave your guests spellbound.
               </p>
+
               <div className="flex gap-4">
-                <button className="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-black/80 transition-all">
+                <Link
+                  to="/contact"
+                  className="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-black/80 transition-all"
+                >
                   Get a Quote
-                </button>
+                </Link>
               </div>
             </div>
+
             <div className="lg:w-1/2 h-80 lg:h-auto">
               <img
                 src="/programs.png"

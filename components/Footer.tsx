@@ -1,10 +1,16 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Instagram, Youtube, Mail, MapPin, Phone, Crown } from 'lucide-react';
-import WhatsAppIcon from './WhatsAppIcon';
-import Logo from './Logo';
-import { BUSINESS_NAME, LOCATION, PHONES, EMAIL, SOCIAL_LINKS, WHATSAPP_NUMBER } from '../constants';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Instagram, Youtube, Mail, MapPin, Phone, Crown } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
+import Logo from "./Logo";
+import {
+  BUSINESS_NAME,
+  LOCATION,
+  PHONES,
+  EMAIL,
+  SOCIAL_LINKS,
+  WHATSAPP_NUMBER,
+} from "../constants";
 
 const Footer: React.FC = () => {
   return (
@@ -17,16 +23,32 @@ const Footer: React.FC = () => {
               <Logo className="h-20 w-auto" />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Dhanbad's premier dance academy dedicated to nurturing talent and spreading the joy of movement since 2015. Join our family today.
+              Dhanbad's premier dance academy dedicated to nurturing talent and
+              spreading the joy of movement since 2015. Join our family today.
             </p>
             <div className="flex gap-4">
-              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="bg-white/5 hover:bg-whatsapp hover:text-white p-3 rounded-full transition-all text-white group">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 hover:bg-whatsapp hover:text-white p-3 rounded-full transition-all text-white group"
+              >
                 <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
-              <a href={SOCIAL_LINKS.instagramAcademy} target="_blank" rel="noopener noreferrer" className="bg-white/5 hover:bg-gold hover:text-black p-3 rounded-full transition-all text-white">
+              <a
+                href={SOCIAL_LINKS.instagramAcademy}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 hover:bg-gold hover:text-black p-3 rounded-full transition-all text-white"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer" className="bg-white/5 hover:bg-gold hover:text-black p-3 rounded-full transition-all text-white">
+              <a
+                href={SOCIAL_LINKS.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 hover:bg-gold hover:text-black p-3 rounded-full transition-all text-white"
+              >
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -36,9 +58,18 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
             <ul className="space-y-4">
-              {['About', 'Dance Styles', 'Special Programs', 'Gallery', 'Contact'].map((item) => (
+              {[
+                "About",
+                "Dance Styles",
+                "Special Programs",
+                "Gallery",
+                "Contact",
+              ].map((item) => (
                 <li key={item}>
-                  <Link to={`/${item.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-gold transition-colors flex items-center gap-2">
+                  <Link
+                    to={`/${item.toLowerCase().replace(" ", "")}`}
+                    className="text-gray-400 hover:text-gold transition-colors flex items-center gap-2"
+                  >
                     <span className="h-px w-3 bg-gold/50" />
                     {item}
                   </Link>
@@ -69,7 +100,8 @@ const Footer: React.FC = () => {
                   <p className="text-gray-400 text-sm">
                     {PHONES.map((p, idx) => (
                       <React.Fragment key={p}>
-                        {p}{idx === 0 ? <br /> : ''}
+                        {p}
+                        {idx === 0 ? <br /> : ""}
                       </React.Fragment>
                     ))}
                   </p>
@@ -90,10 +122,12 @@ const Footer: React.FC = () => {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
+            &copy; {new Date().getFullYear()} {BUSINESS_NAME}. All rights
+            reserved.
           </p>
           <p className="text-gray-500 text-sm">
-            Designed with Passion by <span className="text-gold">Creative Team</span>
+            Designed with Passion by{" "}
+            <span className="text-gold">Hritwik Deo </span>
           </p>
         </div>
       </div>
