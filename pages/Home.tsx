@@ -1,14 +1,18 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 // Cast motion to any to bypass TypeScript environment errors where framer-motion props are not recognized on intrinsic elements.
-import { motion as m } from 'framer-motion';
+import { motion as m } from "framer-motion";
 const motion = m as any;
 // Added missing Instagram icon to the imports.
-import { ChevronRight, Youtube, Phone, Play, Instagram } from 'lucide-react';
-import { DANCE_STYLES, CHOREOGRAPHER, PHONES, SOCIAL_LINKS } from '../constants';
-import SectionHeading from '../components/SectionHeading';
-import Logo from '../components/Logo';
+import { ChevronRight, Youtube, Phone, Play, Instagram } from "lucide-react";
+import {
+  DANCE_STYLES,
+  CHOREOGRAPHER,
+  PHONES,
+  SOCIAL_LINKS,
+} from "../constants";
+import SectionHeading from "../components/SectionHeading";
+import Logo from "../components/Logo";
 
 const Home: React.FC = () => {
   return (
@@ -17,9 +21,9 @@ const Home: React.FC = () => {
       <section className="relative h-screen flex items-center justify-center">
         {/* Hero Background - Image Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="bg.webp" 
-            alt="Hero Background" 
+          <img
+            src="bg.webp"
+            alt="Hero Background"
             className="w-full h-full object-cover opacity-40"
             referrerPolicy="no-referrer"
           />
@@ -36,16 +40,17 @@ const Home: React.FC = () => {
               CV <span className="text-gold">Dance</span> Classes
             </h1>
             <p className="text-xl md:text-3xl font-light text-gray-300 mb-10 max-w-3xl mx-auto">
-              Where <span className="text-gold font-bold">Passion</span> Meets <span className="text-gold font-bold">Performance</span>
+              Where <span className="text-gold font-bold">Passion</span> Meets{" "}
+              <span className="text-gold font-bold">Performance</span>
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link 
+              <Link
                 to="/contact"
                 className="bg-gold text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-gold/20"
               >
                 Join Now
               </Link>
-              <a 
+              <a
                 href={SOCIAL_LINKS.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,7 +59,7 @@ const Home: React.FC = () => {
                 <Youtube className="w-5 h-5 text-red-500" />
                 YouTube
               </a>
-              <a 
+              <a
                 href={SOCIAL_LINKS.instagramAcademy}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,7 +68,7 @@ const Home: React.FC = () => {
                 <Instagram className="w-5 h-5 text-pink-500" />
                 Instagram
               </a>
-              <a 
+              <a
                 href={`tel:${PHONES[0]}`}
                 className="bg-royal-blue text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-800 transition-all md:hidden flex items-center gap-2"
               >
@@ -76,12 +81,14 @@ const Home: React.FC = () => {
 
         {/* Floating Style Pill */}
         <div className="absolute bottom-12 left-0 w-full overflow-hidden whitespace-nowrap opacity-30 pointer-events-none">
-          <motion.div 
-            animate={{ x: ["0%", "-50%"] }} 
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
             transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
             className="text-4xl md:text-6xl font-black text-white/10 uppercase"
           >
-            HIP HOP • BOLLYWOOD • HOUSE • CONTEMPORARY • SALSA • POPPING • B-BOYING • HIP HOP • BOLLYWOOD • HOUSE • CONTEMPORARY • SALSA • POPPING • B-BOYING
+            HIP HOP • BOLLYWOOD • HOUSE • CONTEMPORARY • SALSA • POPPING •
+            B-BOYING • HIP HOP • BOLLYWOOD • HOUSE • CONTEMPORARY • SALSA •
+            POPPING • B-BOYING
           </motion.div>
         </div>
       </section>
@@ -90,7 +97,7 @@ const Home: React.FC = () => {
       <section className="py-24 bg-black relative">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -98,32 +105,49 @@ const Home: React.FC = () => {
               className="relative"
             >
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-royal-blue/20 rounded-full blur-3xl" />
-              <img 
-                src="image5.webp" 
-                alt="Dance Movement" 
+              <img
+                src="image5.webp"
+                alt="Dance Movement"
                 className="rounded-2xl shadow-2xl relative z-10 border border-white/5"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute -bottom-6 -right-6 bg-gold p-8 rounded-2xl z-20 hidden md:block">
                 <p className="text-black text-4xl font-bold">10+</p>
-                <p className="text-black text-xs font-bold uppercase tracking-widest">Years of Excellence</p>
+                <p className="text-black text-xs font-bold uppercase tracking-widest">
+                  Years of Excellence
+                </p>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <span className="text-gold font-bold tracking-widest uppercase text-sm block mb-4">Discover Our Story</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">More Than Just a Dance Academy</h2>
+              <span className="text-gold font-bold tracking-widest uppercase text-sm block mb-4">
+                Discover Our Story
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                More Than Just a Dance Academy
+              </h2>
               <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Founded by <span className="text-white font-bold">Chandu Vishwa</span>, CV Dance Classes has evolved into a creative sanctuary for aspiring dancers in Dhanbad. We believe that every movement tells a story, and we're here to help you write yours.
+                Founded by{" "}
+                <span className="text-white font-bold">Chandu Vishwa</span>, CV
+                Dance Classes has evolved into a creative sanctuary for aspiring
+                dancers in Dhanbad. We believe that every movement tells a
+                story, and we're here to help you write yours.
               </p>
               <ul className="space-y-4 mb-10">
-                {['Certified Professional Instructors', 'Modern Dance Studio Equipment', 'Performance Opportunities'].map((feat) => (
-                  <li key={feat} className="flex items-center gap-3 text-white font-medium">
+                {[
+                  "Certified Professional Instructors",
+                  "Modern Dance Studio Equipment",
+                  "Performance Opportunities",
+                ].map((feat) => (
+                  <li
+                    key={feat}
+                    className="flex items-center gap-3 text-white font-medium"
+                  >
                     <div className="bg-gold/20 p-1 rounded-full text-gold">
                       <ChevronRight className="w-5 h-5" />
                     </div>
@@ -131,7 +155,7 @@ const Home: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <Link 
+              <Link
                 to="/about"
                 className="inline-flex items-center gap-2 group text-gold font-bold text-lg hover:underline underline-offset-8"
               >
@@ -146,9 +170,9 @@ const Home: React.FC = () => {
       {/* Styles Cards Preview */}
       <section className="py-24 bg-[#080808]">
         <div className="container mx-auto px-4 md:px-6">
-          <SectionHeading 
-            title="Dance Styles" 
-            subtitle="Explore our diverse range of dance disciplines designed for every skill level." 
+          <SectionHeading
+            title="Dance Styles"
+            subtitle="Explore our diverse range of dance disciplines designed for every skill level."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {DANCE_STYLES.slice(0, 3).map((style, idx) => (
@@ -160,19 +184,21 @@ const Home: React.FC = () => {
                 viewport={{ once: true }}
                 className="group relative overflow-hidden rounded-2xl h-[400px]"
               >
-                <img 
-                  src={style.image} 
-                  alt={style.title} 
+                <img
+                  src={style.image}
+                  alt={style.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8 w-full">
-                  <h3 className="text-3xl font-bold text-white mb-2">{style.title}</h3>
+                  <h3 className="text-3xl font-bold text-white mb-2">
+                    {style.title}
+                  </h3>
                   <p className="text-gray-300 text-sm mb-4 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {style.description}
                   </p>
-                  <Link 
+                  <Link
                     to="/styles"
                     className="inline-block bg-white text-black font-bold px-6 py-2 rounded-full text-sm group-hover:bg-gold transition-colors"
                   >
@@ -183,8 +209,8 @@ const Home: React.FC = () => {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link 
-              to="/styles" 
+            <Link
+              to="/styles"
               className="bg-royal-blue text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition-all inline-block shadow-lg"
             >
               View All Styles
@@ -200,22 +226,28 @@ const Home: React.FC = () => {
             <div className="w-full md:w-1/3">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gold rounded-3xl translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300" />
-                <img 
-                  src="chore.webp" 
-                  alt={CHOREOGRAPHER} 
+                <img
+                  src="chore.webp"
+                  alt={CHOREOGRAPHER}
                   className="w-full h-auto rounded-3xl grayscale hover:grayscale-0 transition-all duration-500"
                   referrerPolicy="no-referrer"
                 />
               </div>
             </div>
             <div className="w-full md:w-2/3">
-              <span className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Meet the Maestro</span>
-              <h2 className="text-5xl font-black text-white mb-6 uppercase tracking-tighter">{CHOREOGRAPHER}</h2>
+              <span className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block">
+                Meet the Maestro
+              </span>
+              <h2 className="text-5xl font-black text-white mb-6 uppercase tracking-tighter">
+                {CHOREOGRAPHER}
+              </h2>
               <p className="text-gray-300 text-xl leading-relaxed mb-8 italic">
-                "Dance is the hidden language of the soul. My mission is to empower every student to find their own rhythm and express their unique identity through movement."
+                "Dance is the hidden language of the soul. My mission is to
+                empower every student to find their own rhythm and express their
+                unique identity through movement."
               </p>
               <div className="flex flex-wrap gap-4">
-                <a 
+                <a
                   href={SOCIAL_LINKS.instagramChoreographer}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -233,8 +265,8 @@ const Home: React.FC = () => {
       {/* CTA Banner */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-royal-blue">
-          <img 
-            src="https://images.unsplash.com/photo-1516475429286-465d815a0df7?auto=format&fit=crop&q=80&w=1920" 
+          <img
+            src="https://images.unsplash.com/photo-1516475429286-465d815a0df7?auto=format&fit=crop&q=80&w=1920"
             className="w-full h-full object-cover opacity-20"
             alt="CTA Background"
             referrerPolicy="no-referrer"
@@ -242,12 +274,15 @@ const Home: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-royal-blue via-royal-blue/60 to-transparent" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">Ready to Unleash Your Inner Dancer?</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
+            Ready to Unleash Your Inner Dancer?
+          </h2>
           <p className="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
-            Classes are filling up fast! Book your spot today and become part of Dhanbad's most energetic dance community.
+            Classes are filling up fast! Book your spot today and become part of
+            Dhanbad's most energetic dance community.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link 
+            <Link
               to="/contact"
               className="bg-gold text-black px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform"
             >
