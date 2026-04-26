@@ -57,27 +57,27 @@ const Footer: React.FC = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
+
             <ul className="space-y-4">
               {[
-                "About",
-                "Dance Styles",
-                "Special Programs",
-                "Gallery",
-                "Contact",
+                { name: "About", path: "/about" },
+                { name: "Dance Styles", path: "/dance-styles" },
+                { name: "Special Programs", path: "/special-programs" },
+                { name: "Gallery", path: "/gallery" },
+                { name: "Contact", path: "/contact" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    to={`/${item.toLowerCase().replace(" ", "")}`}
+                    to={item.path}
                     className="text-gray-400 hover:text-gold transition-colors flex items-center gap-2"
                   >
                     <span className="h-px w-3 bg-gold/50" />
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
           {/* Contact Info */}
           <div className="lg:col-span-2">
             <h3 className="text-xl font-bold text-white mb-6">Contact Us</h3>
